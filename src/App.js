@@ -15,6 +15,7 @@ function App() {
         <main>
           <Dictionary />
         </main>
+        <hr />
         <footer className="text-center">
           <small>
             This{" "}
