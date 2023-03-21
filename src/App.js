@@ -4,7 +4,7 @@ import NavBar from "./NavBar.js";
 import logo from "./mylogo.png";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <div className="container">
@@ -22,6 +22,7 @@ function App() {
             <a
               href="https://github.com/bcot-code/Awesome1-proj"
               target="_blank"
+              rel="noreferrer"
             >
               Open Souce
             </a>{" "}
@@ -32,5 +33,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
