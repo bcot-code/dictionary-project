@@ -1,13 +1,33 @@
+import React from "react";
+import Dictionary from "./Dictionary";
+import NavBar from "./NavBar.js";
 import logo from "./mylogo.png";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo img-fluid" alt="logo" />
-        <p></p>
-      </header>
+      <div className="container">
+        <header className="App-header">
+          <img src={logo} className="App-logo img-fluid" alt="logo" />
+          <NavBar />
+        </header>
+        <main>
+          <Dictionary />
+        </main>
+        <footer className="text-center">
+          <small>
+            This{" "}
+            <a
+              href="https://github.com/bcot-code/Awesome1-proj"
+              target="_blank"
+            >
+              Open Souce
+            </a>{" "}
+            is by<em>Barbara C.</em>{" "}
+          </small>
+        </footer>
+      </div>
     </div>
   );
 }
