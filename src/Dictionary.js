@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Dictionary.css";
 
-export default function Dictionary(props) {
+export default function Dictionary() {
   let [keyword, setWork] = useState("");
 
   function search(event) {
