@@ -7,8 +7,9 @@ export default function Dictionary() {
   let [keyword, setWork] = useState("");
   let [definition, setDef] = useState(null);
 
-  function searchHandle(event) {
-    setWork(event.target.value);
+  function handleResponse(response) {
+    console.log(response.data.meanings[0].definition);
+    setDef(response.data);
   }
 
   function handleSubmit(event) {
@@ -17,10 +18,10 @@ export default function Dictionary() {
     axios.get(api).then(handleResponse);
   }
 
-  function handleResponse(response) {
-    console.log(response.data.meanings[0].definition);
-    setDef(response.data);
+  function searchHandle(event) {
+    setWork(event.target.value);
   }
+
   return (
     <div>
       <section>
