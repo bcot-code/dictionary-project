@@ -3,12 +3,11 @@ import "./Dictionary.css";
 import Result from "./Results";
 import axios from "axios";
 
-export default function Dictionary(props) {
+export default function Dictionary() {
   let [keyword, setWork] = useState("");
-  let [definition, setDef] = useState("");
+  let [definition, setDef] = useState(null);
 
   function searchHandle(event) {
-    event.preventDefault();
     setWork(event.target.value);
   }
 
@@ -19,7 +18,8 @@ export default function Dictionary(props) {
   }
 
   function handleResponse(response) {
-    setDef(response.data[0]);
+    console.log(response.data.meanings[0].definition);
+    setDef(response.data);
   }
   return (
     <div>
