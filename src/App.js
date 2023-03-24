@@ -13,7 +13,7 @@ export default function App() {
           <NavBar />
         </header>
         <main>
-          <Dictionary />
+          <Dictionary search="search" />
         </main>
         <hr />
         <footer className="text-center">
