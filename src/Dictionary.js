@@ -6,8 +6,8 @@ export default function Dictionary() {
   let [keyword, setWork] = useState("");
 
   function handleResponse(response) {
-    console.log(response.data[0]);
-    console.log(response.data[0].meanings[0]);
+    console.log(response.data);
+    console.log(response.data.meanings[0]);
   }
 
   function search(event) {
