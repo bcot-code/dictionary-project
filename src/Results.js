@@ -1,10 +1,10 @@
 import React from "react";
 import Meanings from "./Meanings";
 
-export default function Result(props) {
+export default function Results(props) {
   if (props.defintion) {
     return (
-      <div className="Result">
+      <div className="Results">
         <section>
           <h1>{props.defintion.word}</h1>
           <h2>{props.defintion.phonetic}</h2>

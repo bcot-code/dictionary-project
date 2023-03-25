@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Dictionary.css";
-import Result from "./Results";
+import Results from "./Results";
 import axios from "axios";
 
 export default function Dictionary() {
@@ -28,10 +28,10 @@ export default function Dictionary() {
         <h1 className="Dictionary">Online Dictionary</h1>
         <form onSubmit={handleSubmit}>
           <label>What word are you looking for?</label>
-          <input type={"search"} autoFocus="on" onChange={searchHandle} />
+          <input type="search" autoFocus="on" onChange={searchHandle} />
         </form>
       </section>
-      <Result definition={definition} />
+      <Results definition={definition} />
     </div>
   );
 }
