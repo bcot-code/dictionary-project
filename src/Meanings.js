@@ -1,11 +1,20 @@
 import React from "react";
 
 export default function Meanings(props) {
-  return (
-    <div className="Meanings">
-      <h3>{props.meaning.partOfSpeech}</h3>
-      <p>{props.meaning.definition}</p>
-      <em>{props.meaning.example}</em>
-    </div>
-  );
+  if (props.meaning) {
+    return (
+      <div className="Meanings">
+        <h3>{props.meaning.partOfSpeech}</h3>
+        <p>{props.meaning.definition}</p>
+        <em>{props.meaning.example}</em>
+        <div className="Syn">
+          {props.meaning.synonyms.map(function (synonym, index) {
+            return <span key={index}>{synonym}</span>;
+          })}
+        </div>
+      </div>
+    );
+  } else {
+    return null;
+  }
 }
