@@ -28,6 +28,7 @@ export default function Dictionary() {
         <h1 className="Dictionary">Online Dictionary</h1>
         <form onSubmit={handleSubmit}>
           <label>What word are you looking for?</label>
+          <br />
           <input type="search" autoFocus="on" onChange={searchHandle} />
         </form>
       </section>
