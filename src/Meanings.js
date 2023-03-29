@@ -8,9 +8,11 @@ export default function Meanings(props) {
         <p>{props.meaning.definition}</p>
         <em>{props.meaning.example}</em>
         <div className="Syn">
-          {props.meaning.synonyms.map(function (synonym, index) {
-            return <span key={index}>{synonym}</span>;
-          })}
+          {props.meaning.synonyms
+            ? props.meaning.synonyms.map(function (synonym, index) {
+                return <li key={index}>{synonym}</li>;
+              })
+            : null}
         </div>
       </div>
     );
