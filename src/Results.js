@@ -1,13 +1,14 @@
 import React from "react";
 import Meanings from "./Meanings";
 import Phonetic from "./Phonetics";
+import "./Results.css";
 
 export default function Results(props) {
   if (props.definition) {
     return (
       <div className="Results">
-        <section className="word row">
-          <h1>{props.definition.word}</h1>
+        <h1 className="word">{props.definition.word}</h1>
+        <section className="row">
           <div className="col-8">
             <div className="col-2">
               <Phonetic phonetic={props.definition.phonetic} />
@@ -15,7 +16,7 @@ export default function Results(props) {
           </div>
         </section>
 
-        <section className="meaning">
+        <section className="horizontal">
           {props.definition.meanings.map(function (meaning, index) {
             return (
               <section key={index}>

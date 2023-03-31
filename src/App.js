@@ -7,16 +7,17 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
-      <div className="container">
-        <header className="App-header">
-          <img src={logo} className="App-logo img-fluid" alt="logo" />
+      <div className="row">
+        <header className="App-header col-6">
+          <img src={logo} className="App-logo img-fluid " alt="logo" />
           <NavBar />
+          <div className="col-5"></div>
         </header>
-        <main>
-          <Dictionary />
+        <main className="container dictionary">
+          <Dictionary defaultWord="life" />
         </main>
         <hr />
-        <footer className="text-center">
+        <footer className="text-center reference">
           <small>
             This{" "}
             <a

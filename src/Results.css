@@ -1,0 +1,7 @@
+.Results h1 {
+  font-size: 60px;
+  font-weight: 300;
+}
+.Results .horizontal {
+  border-bottom: 0.1em solid black;
+}

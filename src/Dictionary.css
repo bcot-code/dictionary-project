@@ -2,3 +2,23 @@
   text-align: end;
   padding-top: 200px;
 }
+
+input {
+  padding: 5px 9px;
+  font-weight: 200;
+  font-family: "Courier New";
+  font-size: 14px;
+  border-radius: 15px;
+  background-color: transparent;
+  transition: all 250ms ease-in-out;
+  transform-style: preserve-3d;
+}
+
+input:hover,
+input:focus {
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #575756;
+  border-radius: 0;
+  background-position: 100% center;
+}
