@@ -13,12 +13,14 @@ export default function Meanings(props) {
             <p>{props.meaning.definition}</p>
             <em>{props.meaning.example}</em>
           </div>
-          <div className="Syn">
-            {props.meaning.synonyms
-              ? props.meaning.synonyms.map(function (synonym, index) {
-                  return <li key={index}>{synonym}</li>;
-                })
-              : null}
+          <div>
+            <ul className="Syn col-2">
+              {props.meaning.synonyms
+                ? props.meaning.synonyms.map(function (synonym, index) {
+                    return <li key={index}>{synonym}</li>;
+                  })
+                : null}
+            </ul>
           </div>
         </div>
       </div>

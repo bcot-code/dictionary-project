@@ -20,3 +20,9 @@
 .Meanings .vertical {
   border-left: 0.1em solid black;
 }
+
+.Meanings .Syn {
+  padding-top: 6px;
+  list-style: none;
+  font-size: 14px;
+}
