@@ -9,7 +9,12 @@ export default function Results(props) {
       <div className="Results">
         <h1 className="word">{props.definition.word}</h1>
         <section className="row">
-          <Phonetic phonetic={props.definition.phonetic} />
+          <div className="col-8"></div>
+          <div>
+            <div>
+              <Phonetic phonetic={props.definition.phonetic} />
+            </div>
+          </div>
         </section>
         <br />
         <hr />

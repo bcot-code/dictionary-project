@@ -22,9 +22,9 @@ export default function Dictionary(props) {
     let api = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=db9df5cafd32a54ef0cf0c7bd2635oct`;
     axios.get(api).then(handleResponse);
 
-    let headers = `https://api.unsplash.com/photos/?client_id=YOUR_ACCESS_KEY`;
-    let unsplashsApi = `https://api.unsplash.com/v1/search?query=${keyword}&per_page=4`;
-    axios.get(unsplashsApi, { headers: headers }).then(handleUnsplashResponse);
+    let key = `db9df5cafd32a54ef0cf0c7bd2635oct`;
+    let sheApi = `https://api.shecodes.io/images/v1/search?query=${keyword}&key=${key}`;
+    axios.get(sheApi).then(handleUnsplashResponse);
   }
 
   function searchHandle(event) {
